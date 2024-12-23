@@ -1,0 +1,292 @@
+body {
+   
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .repositories-page {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 15px;
+    height: 100px;
+    
+    
+    
+    border-right: 1px solid #e0e0e0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    
+    
+  }
+  .hamburger-menu{
+    visibility: hidden;
+  }
+  @media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    
+    z-index: 1;
+  }
+  .logo-menu{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .hamburger-menu{
+    width: 10px;
+    margin-right: 15px;
+    visibility: inherit;
+  }
+  .repositories-page{
+    position:sticky;
+    
+    
+  }
+  /* Sidebar styles */
+.toggleup {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .toggleup.visible {
+    max-height: 500px; /* Adjust based on content height */
+    opacity: 10;
+  }
+  
+  .toggleup.hidden {
+    max-height: 0;
+    opacity: 0;
+  }
+  
+
+}
+  
+  
+  
+  .logo1 {
+    height: 40px;
+    object-fit: contain;
+    margin-left: 0px;
+  }
+  
+  .select-form {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .select-form select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar ul li.active {
+    color: #070707;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #0977f0d9;
+  }
+  
+  .sidebar ul li .icon {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  
+  
+  .main-content {
+    flex: 1;
+    padding: 15px;
+    margin: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  .main-content.full-width {
+    margin-left: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .add-repository {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #0073e6;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .refresh-repositories {
+    padding: 10px 15px;
+    border: 0.1px solid rgb(245, 243, 243);
+    margin: 10px;
+    background-color: #eef0f3;
+    color: #161515;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  
+  
+  .repository-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .repository-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 25px 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-radius: 0px;
+    border: 0.5px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .repository-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .repository-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .repo-type {
+    font-size: 0.85rem;
+    color: #0073e6;
+    margin-left: 10px;
+    font-weight: 500;
+  }
+  
+  .repository-item p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .repo-type{
+    display: inline-block; /* Ensures the element sizes to its content */
+    padding: 0px 10px; /* Adjusts the size of the oval */
+     /* Font size of the text */
+     /* Makes the text bold */
+    color: #0927e8; /* Text color */
+    background-color: #76afecb3; /* Background color for the oval */
+    border-radius: 50px; /* Creates the oval shape */
+    text-align: center; /* Centers the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+  }
+  /* Search Bar Wrapper */
+  .search-bar-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1rem;
+  }
+  
+  .search-bar {
+    width: 25%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: 0 0 2px rgb(172 175 177);
+  }
+  .support-logout{
+    margin-top: 260px;
+  }
+  /* Sidebar Toggler */
+  
+  .header h2 span{
+    font-size: 0.9rem;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .repositories-page {
+      flex-direction: column;
+     
+    }
+  
+    .main-content {
+      margin: 0px;
+      padding-top: 80px;
+    }
+    .search-bar{
+        width:100%;
+    }
+    .header{
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      align-items: flex-start;
+    }
+    
+    .support-logout{
+      margin-top: 0px;
+    }
+  }
+  
